@@ -1,4 +1,7 @@
 <h3>Welcome to PokePortal</h3>
+<pre>
+<%= Cowsay.say("Hello") %>
+</pre>
 <p><%= link_to 'Trainers:', trainers_path %> <%= Trainer.count %> registered</p>
 
 <% if @pokemon and current_trainer %>
