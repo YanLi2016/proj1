@@ -11,7 +11,6 @@ gem 'spring',        group: :development
 gem 'devise'
 gem 'foundation-rails'
 gem 'simple_form'
-gem "binding_of_caller"
 gem "rails_12factor"
 gem 'unicorn'
 gem 'cowsay'
