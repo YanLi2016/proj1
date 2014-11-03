@@ -33,6 +33,18 @@ class PokemonController < ApplicationController
 			redirect_to new_pokemon_path
 		end 
 	end
+
+	def heal
+		@pokemon = Pokemon.find params[:id]
+		@pokemon.health += 10
+		if @pokemon.health <= 0
+			@pokemon.destroy
+		else 
+			@pokemon.save
+		end  
+		redirect_to trainer_path(@pokemon.trainer_id)
+		
+	end
 	private
   	# filters out unwanted params
   	def pokemon_params

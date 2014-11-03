@@ -9,6 +9,7 @@
             <li>level: <%= pokemon.level %></li>
             <li>health: <%= pokemon.health %></li>
             <li><%= button_to "Damage!", damage_path(id: pokemon), :class => "button medium", :method => :patch %></li>
+            <li><%= button_to "Heal!", heal_path(id: pokemon), :class => "button medium", :method => :patch %></li>
         <% end %>
     </ul>
     <%= button_to "Create!", new_pokemon_path(), :class => "button medium", :method => :get if @trainer.id == current_trainer.id%>
