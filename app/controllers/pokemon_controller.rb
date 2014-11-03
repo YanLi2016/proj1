@@ -9,11 +9,12 @@ class PokemonController < ApplicationController
 	def damage
 		@pokemon = Pokemon.find params[:id]
 		@pokemon.health -= 10
-		if @pokemon.health <= 0
-			@pokemon.destroy
-		else 
-			@pokemon.save
-		end  
+		# if @pokemon.health <= 0
+		# 	@pokemon.destroy
+		# else 
+		# 	@pokemon.save
+		# end  
+		@pokemon.save
 		redirect_to trainer_path(@pokemon.trainer_id)
 	end
 
